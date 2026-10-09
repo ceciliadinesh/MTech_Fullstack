@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidLive - Live Auction Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container nav">
+
+        <div class="logo">
+            Bid<span>Live</span>
+        </div>
+
+        <nav id="navMenu">
+            <a href="#home">Home</a>
+            <a href="#auctions">Auctions</a>
+            <a href="#how">How It Works</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+</header>
+
+
+<main>
+
+
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div>
+
+                <p class="badge">
+                    LIVE AUCTIONS
+                </p>
+
+                <h1>
+                    Bid. Win.<br>
+                    <span>Own It.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Discover unique products and compete with bidders
+                    in real-time auctions.
+                </p>
+
+                <a href="#auctions" class="primary-btn">
+                    Explore Auctions
+                </a>
+
+            </div>
+
+
+            <div class="hero-card">
+
+                <div class="live-dot"></div>
+
+                <p>LIVE BIDDERS</p>
+
+                <strong id="liveBidders">
+                    128
+                </strong>
+
+                <small>
+                    People bidding right now
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="auctions section" id="auctions">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        CURRENTLY LIVE
+                    </p>
+
+                    <h2>
+                        Featured Auctions
+                    </h2>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search"
+                    placeholder="Search auctions..."
+                >
+
+            </div>
+
+
+            <div
+                id="auctionGrid"
+                class="auction-grid">
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <section class="how section" id="how">
+
+        <div class="container">
+
+            <div class="section-heading centered">
+
+                <p class="eyebrow">
+                    SIMPLE PROCESS
+                </p>
+
+                <h2>
+                    How It Works
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div>01</div>
+
+                    <h3>
+                        Choose an Auction
+                    </h3>
+
+                    <p>
+                        Browse our collection of live auctions.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div>02</div>
+
+                    <h3>
+                        Place Your Bid
+                    </h3>
+
+                    <p>
+                        Enter an amount higher than the current bid.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div>03</div>
+
+                    <h3>
+                        Win & Collect
+                    </h3>
+
+                    <p>
+                        Highest bidder wins when the timer reaches zero.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 BidLive — Live Auction Platform
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+<div
+    class="modal-overlay"
+    id="modalOverlay">
+
+    <div class="modal">
+
+
+        <button
+            class="close-btn"
+            id="closeModal">
+
+            &times;
+
+        </button>
+
+
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Auction item"
+        >
+
+
+        <div class="modal-content">
+
+            <p class="eyebrow">
+                LIVE AUCTION
+            </p>
+
+
+            <h2 id="modalTitle"></h2>
+
+
+            <p id="modalDescription"></p>
+
+
+            <div class="auction-info">
+
+                <div>
+
+                    <span>
+                        Current Bid
+                    </span>
+
+                    <strong id="modalPrice">
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Time Left
+                    </span>
+
+                    <strong id="modalTimer">
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <form id="bidForm">
+
+                <label for="bidInput">
+                    Your Bid
+                </label>
+
+
+                <div class="bid-input">
+
+                    <span>
+                        ₹
+                    </span>
+
+                    <input
+                        type="number"
+                        id="bidInput"
+                        min="1"
+                        step="1"
+                        placeholder="Enter your bid"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn full">
+
+                    Place Bid
+
+                </button>
+
+            </form>
+
+
+            <p
+                id="bidMessage"
+                class="message">
+            </p>
+
+
+
+            <div class="history">
+
+                <h3>
+                    Recent Bids
+                </h3>
+
+                <ul id="bidHistory">
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div
+    id="toast"
+    class="toast">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
